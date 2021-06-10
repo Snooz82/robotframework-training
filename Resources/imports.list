@@ -1,0 +1,11 @@
+*** Import List ***
+SeleniumLibrary
+String
+BuiltIn
+Dialogs
+Browser
+Collections
+
+/Source/RF-Schulung/02_RobotFiles/Resources/Libraries/MyLib2.py
+/Source/RF-Schulung/02_RobotFiles/Resources/Keywords/technicalKeywords.resource
+/Source/RF-Schulung/02_RobotFiles/Resources/Keywords/functionalKeywords.resource
