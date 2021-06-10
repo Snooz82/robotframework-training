@@ -1,0 +1,18 @@
+{
+    "rfLanguageServer.4spacesTab": true,
+    "rfLanguageServer.libraries": [
+        "BuiltIn-3.2.1",
+        "Collections-3.2.1",
+        "DateTime-3.2.1",
+        "FakerLibrary-",
+        "JSONLibrary-",
+        "OperatingSystem-3.2.1",
+        "Process-3.2.1",
+        "RequestsLibrary-0.7.0",
+        "SSHLibrary-3.4.0",
+        "String-3.2.1",
+        "Telnet-3.2.1",
+        "XML-3.2.1"
+    ],
+    "rfLanguageServer.pythonKeywords": true
+}

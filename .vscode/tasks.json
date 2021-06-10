@@ -1,0 +1,85 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Robot TestSuite",
+            "type": "shell",
+            "command": "robot -d ${workspaceFolder}/logs --Loglevel TRACE:INFO \"${file}\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            }
+        },
+        {
+            "label": "Robot TestSuite wo Debugging",
+            "type": "shell",
+            "command": "robot -d ${workspaceFolder}/logs --Loglevel TRACE:INFO \"${file}\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            }
+        },
+        {
+            "label": "Robot TestSuite with StackTrace",
+            "type": "shell",
+            "command": "robot --listener RobotStackTracer -d ${workspaceFolder}/logs --Loglevel TRACE:INFO \"${file}\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            }
+        },
+        {
+            "label": "Robot selected Test",
+            "type": "shell",
+            "command": "robot --listener RobotStackTracer  -d ${workspaceFolder}/logs --Loglevel TRACE:INFO --test \"*${selectedText}*\" \"${file}\"",
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Robot Workspace",
+            "type": "shell",
+            "command": "robot --listener RobotStackTracer  -d ${workspaceFolder}/logs --variable KEYWORD_DIR:${workspaceFolder}/Resources/Keywords --Loglevel TRACE:INFO \"${workspaceFolder}\"",
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Robot Workspace dry",
+            "type": "shell",
+            "command": "robot --dryrun --listener RobotStackTracer  -d ${workspaceFolder}/logs --variable KEYWORD_DIR:${workspaceFolder}/Resources/Keywords --Loglevel TRACE:INFO \"${workspaceFolder}\"",
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
