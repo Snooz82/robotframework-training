@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.autoSave": "onFocusChange",
+        "terminal.integrated.rendererType": "canvas",
+        "editor.tabSize": 4,
+    }
+}
